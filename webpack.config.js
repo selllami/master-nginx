@@ -1,15 +1,15 @@
 const path = require("path");
 const { VueLoaderPlugin } = require("vue-loader");
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
-    index: './client/index.js'
+    index: "./client/index.js",
   },
   output: {
     filename: "[name].bundle.js",
-    path: path.join(__dirname, "server/assets/"),
+    path: path.join(__dirname, "build"),
   },
   module: {
     rules: [
@@ -31,9 +31,9 @@ module.exports = {
     new VueLoaderPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: path.resolve('./public/index.html'),
-      favicon: path.resolve('./public/favicon.ico'),
-      title: 'nginx-docker-template',
+      template: path.resolve("./public/index.html"),
+      favicon: path.resolve("./public/favicon.ico"),
+      title: "master-nginx",
     }),
   ],
 };

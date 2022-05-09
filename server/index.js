@@ -5,7 +5,7 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, "assets")));
 
-app.get('/user', function(req, res) {
+app.get('/', function(req, res) {
   res.status(200).send('hello world');
 });
 

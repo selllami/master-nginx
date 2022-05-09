@@ -1,25 +1,25 @@
 {
-  "name": "nginx-docker-template",
+  "name": "master-nginx",
   "version": "1.0.0",
   "description": "docker nginx",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server/index.js",
+    "start": "webpack-dev-server --config ./webpack.config.dev.js",
     "build": "webpack --config ./webpack.config.prod.js",
-    "watch": "webpack --config ./webpack.config.dev.js",
+    "serve": "nodemon server/index.js",
     "commit": "git add . && git-cz",
     "publish": "git pull && npm version patch && git push"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LuoHaoAt2017/nginx-docker-template.git"
+    "url": "git+https://github.com/LuoHaoAt2017/master-nginx.git"
   },
-  "author": "",
+  "author": "LuoHao",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LuoHaoAt2017/nginx-docker-template/issues"
+    "url": "https://github.com/LuoHaoAt2017/master-nginx/issues"
   },
-  "homepage": "https://github.com/LuoHaoAt2017/nginx-docker-template#readme",
+  "homepage": "https://github.com/LuoHaoAt2017/master-nginx#readme",
   "dependencies": {
     "express": "^4.17.2",
     "mysql2": "^2.3.3",
